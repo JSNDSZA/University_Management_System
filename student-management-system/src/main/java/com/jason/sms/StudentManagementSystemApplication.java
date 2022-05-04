@@ -11,16 +11,16 @@ import com.jason.sms.repository.StudentRepository;
 @SpringBootApplication
 public class StudentManagementSystemApplication implements CommandLineRunner {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {                                 //Exception Handling 
 		SpringApplication.run(StudentManagementSystemApplication.class, args);
 	}
 	
-	@Autowired
+	@Autowired              
 	private StudentRepository studentRepository;
 @Override
 public void run(String... args) throws Exception {
 	
-	Student student1 = new Student("Ramesh", "Fadatare", "ramesh@gmail.com");
+	Student student1 = new Student("Ramesh", "Fadatare", "ramesh@gmail.com");                  //Pre-added Inputs
 	
 	studentRepository.save(student1);
 	
